@@ -1,8 +1,12 @@
   const STORAGE_KEY = 'student_list_storage';
+  const number = 'number';
 
   var app = new Vue({
       el: '#app',
       data: {
+          n:0,
+          student_ex1: {id: '6304101382', fname: 'เอกรินทร์', lname: 'แสงยอ', email: 'specialday191@gmail.com', gpa: '3.52'},
+          student_ex2: {id: '6304101376', fname: 'อัครวุฒิ', lname: 'ปริสุทธิ์สุนทร', email: 'KrikSan1899@hotmail.co.th', gpa: '1.89'},
           student: {},
           student_list: [],
           del_index: null,
@@ -19,6 +23,10 @@
 
       created() {
           this.student_list = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+          this.n = JSON.parse(localStorage.getItem(number));
+              if(this.n==null){
+                 this.addStudent_first();
+              }
       },
       methods: {
 
@@ -115,6 +123,14 @@
               localStorage.setItem(STORAGE_KEY, JSON.stringify(this.student_list));
               alert('ลบข้อมูลนักศึกษาออกแล้ว')
           },
+        
+        addStudent_first: function(){
+            this.student_list.push(this.student_ex1)
+            this.student_list.push(this.student_ex2)
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(this.student_list));
+            this.n++;
+            localStorage.setItem(number, JSON.stringify(this.n));
+          }
 
       },
   });
