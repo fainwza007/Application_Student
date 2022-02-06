@@ -51,16 +51,16 @@
                     <td v-if="student.gpa < 2.00" style="text-align: center;color: red; font-weight: bold;">{{index+1}}
                     </td>
                     <td v-if="student.gpa < 2.00" style="color: red; font-weight: bold; text-align: center;">{{student.id}}</td>
-                    <td v-if="student.gpa < 2.00" style="color: red; font-weight: bold;">{{student.fname}}</td>
-                    <td v-if="student.gpa < 2.00" style="color: red; font-weight: bold;">{{student.lname}}</td>
-                    <td v-if="student.gpa < 2.00" style="color: red; font-weight: bold;">{{student.email}}</td>
+                    <td v-if="student.gpa < 2.00" style="color: red; font-weight: bold;" class="text-center">{{student.fname}}</td>
+                    <td v-if="student.gpa < 2.00" style="color: red; font-weight: bold;" class="text-center">{{student.lname}}</td>
+                    <td v-if="student.gpa < 2.00" style="color: red; font-weight: bold;" class="text-center">{{student.email}}</td>
                     <td v-if="student.gpa < 2.00" style="color: red; font-weight: bold;" class="text-center">
                         {{student.gpa}}</td>
-                    <td v-if="student.gpa >=2.00" style="text-align: center;">{{index+1}}</td>
-                    <td v-if="student.gpa >=2.00" style="text-align: center;">{{student.id}}</td>
-                    <td v-if="student.gpa >=2.00">{{student.fname}}</td>
-                    <td v-if="student.gpa >=2.00">{{student.lname}}</td>
-                    <td v-if="student.gpa >=2.00">{{student.email}}</td>
+                    <td v-if="student.gpa >=2.00" class="text-center">{{index+1}}</td>
+                    <td v-if="student.gpa >=2.00" class="text-center">{{student.id}}</td>
+                    <td v-if="student.gpa >=2.00" class="text-center">{{student.fname}}</td>
+                    <td v-if="student.gpa >=2.00" class="text-center">{{student.lname}}</td>
+                    <td v-if="student.gpa >=2.00" class="text-center">{{student.email}}</td>
                     <td v-if="student.gpa >=2.00" class="text-center">{{student.gpa}}</td>
                     <td align="center">
 
